@@ -1,0 +1,169 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// desktop
+@media (min-width: 1025px) {
+
+}
+
+
+
+
+
+
+
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    margin: -40px 0 15px 0;
+    padding-top: 20px;
+}
+
+
+
+.top {
+    background-image: url("../images/devidbowie_top.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+  #works {
+    .container {
+      @include flex-direction(row);     // ワークスボックスを横に並べる
+      justify-content: space-between;
+    }
+    .works-box {
+      margin: 0 10px;                   // 左右にマージン
+    }
+  }
+
+// Workd
+#works {
+  background-color: $subColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(row);    // ワークスボックスを縦に並べる
+
+  }
+}
+
+
+    .works-box {
+    @include flex(1);
+    margin: 10px 0;                     // 上下にマージン
+    padding: 20px;
+    background-color: #fff;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+    margin-bottom: 20px;
+  }
+  
+  .works-box img {
+    width: 100%;
+  }
+  
+
+@media (max-width: 769px) {
+  .container {
+    flex-direction: column;
+  }
+  #works .container {
+    display: block;
+  }
+
+}
+.works-box h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#button {
+      background-image: url("../images/back_2.jpg");
+    height: 115px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 60px;
+}
+
+#button p {
+  text-align: center;
+  padding: 0 10px 0 10px;
+  margin-top: -30px;
+}
+
+#button h3 {
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #e60012;
+  color: #fff;
+  width: 280px;
+  margin: auto;
+  border-radius: 4px;
+  margin-top: 10px;
+  &:hover {
+    background-color: darken(#e60012, 10%);
+    text-decoration: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 769px) {
+  .top {
+    height: 250px;
+  }
+}
+
+#works .works-box {
+  margin-bottom: 10px;
+}
+
+.container {
+  padding-bottom: 10px;
+}
